@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
 from sys import argv
-from calculator_1 import add, sub, mul, div
+from calculator_1 import add, sub, mul, 
 
 ops = ['+', '-', '*', '/']
 argc = len(argv)
@@ -22,4 +21,4 @@ if __name__ == '__main__':
         elif argv[2] == '*':
             print('{:d} * {:d} = {:d}'.format(a, b, mul(a, b)))
         else:
-	    print('{:d} / {:d} = {:d}'.format(a, b, div(a, b)))
+            print('{:d} / {:d} = {:d}'.format(a, b, div(a, b)))
