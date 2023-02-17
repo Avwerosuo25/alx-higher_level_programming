@@ -178,7 +178,8 @@ class TestSquareMethods(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r1)
             self.assertEqual(str_out.getvalue(), res)
-def test_str_3(self):
+    
+    def test_str_3(self):
         """ Test __str__ return value """
         s1 = Square(5)
         res = "[Square] (1) 0/0 - 5\n"

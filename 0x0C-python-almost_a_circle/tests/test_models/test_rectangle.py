@@ -8,8 +8,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class
-TestRectangleMethods(unittest.TestCase):
+class TestRectangleMethods(unittest.TestCase):
     """ Suite to test Rectangle class """
 
     def setUp(self):
@@ -194,7 +193,7 @@ TestRectangleMethods(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r1)
             self.assertEqual(str_out.getvalue(), res)
-r2 = Rectangle(25, 86, 4, 7)
+            r2 = Rectangle(25, 86, 4, 7)
         res = "[Rectangle] (2) 4/7 - 25/86\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r2)
