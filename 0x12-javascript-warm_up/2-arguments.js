@@ -1,16 +1,10 @@
 #!/usr/bin/node
 
-function bestSchool () {
-  const args = arguments.length;
-  if (args === 0) {
-    console.log('No argument');
-  } else if (args === 1) {
-    console.log('Argument found');
-  } else {
-    console.log('Arguments found');
-  }
+const numArgs = process.argv.length - 2;
+if (numArgs === 0) {
+	console.log('No argument');
+} else if (numArgs === 1) {
+	console.log('Argument found');
+} else {
+	console.log('Arguments found');
 }
-
-bestSchool();
-bestSchool(1);
-bestSchool(1,2,3);
