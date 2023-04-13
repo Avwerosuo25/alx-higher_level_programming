@@ -10,3 +10,7 @@ function bestSchool () {
     console.log('Arguments found');
   }
 }
+
+bestSchool();
+bestSchool(1);
+bestSchool(1,2,3);
