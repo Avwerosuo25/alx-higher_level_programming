@@ -1,7 +1,6 @@
 #!/usr/bin/node
-
-exports.repeatFunction = function (x, callMe) {
+exports.callMeMoby = function (x, callback) {
   for (let i = 0; i < x; i++) {
-    callMe();
+    callback();
   }
 };
