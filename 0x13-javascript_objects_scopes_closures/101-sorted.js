@@ -1,16 +1,12 @@
 #!/usr/bin/node
+const dict = require('./101-data').dict;
+const newDict = {};
 
-const dict = require('./101-data');
-
-// Invert the original dictionary
-const invertedDict = {};
-for (const userId in dict) {
-  const occurrences = dict[userId];
-  if (invertedDict[occurrences] === undefined) {
-    invertedDict[occurrences] = [userId];
-  } else {
-    invertedDict[occurrences].push(userId);
+for (const key in dict) {
+  if (typeof (newDict[dict[key]]) === 'undefined') {
+    newDict[dict[key]] = [];
   }
+  newDict[dict[key]].push(key);
 }
 
-console.log(invertedDict);
+console.log(newDict);
