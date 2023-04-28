@@ -1,3 +1,3 @@
 #!/bin/bash
-# display specific HTTP methods acceptable by the server
-response=$(curl -sI $1)
+# displays HTTP methods the server will accept
+curl -sI $1 | grep Allow | cut -d ' ' -f2-
