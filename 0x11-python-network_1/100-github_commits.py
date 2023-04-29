@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-""" Github code challenge"""
+"""A script that takes 2 arguments: the repository name and owner name, and
+sends a GET request to the GitHub API to obtain the id of the user
+"""
 import requests
-from sys import argv
+import sys
+
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits"\
-          .format(argv[2], argv[1])
-    r = requests.get(url)
-    n = 0
-    for i in r.json():
-        if n < 10:
-            print("{}: {}".format(i.get("sha"),
-                  i.get("commit").get("author").get("name")))
-        n += 1
+    url = 'https://api.github.com/repos/{}/{}/'.format(sys.argv[2], sys.argv[1])
+    response = requests.get(url, auth=(sys.argv[3], sys.argv[4]))
+    try:
+        print(response.json().get('id'))
+    except ValueError:
+        print('Not a valid JSON')
