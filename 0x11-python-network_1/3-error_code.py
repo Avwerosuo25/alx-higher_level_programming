@@ -7,6 +7,11 @@
 - handles urllib.error.HTTPError exceptions and prints the error code if one occurs
 """
 
+import sys
+import urllib.request
+import urllib.error
+
+
 if __name__ == "__main__":
     url = sys.argv[1]
 
