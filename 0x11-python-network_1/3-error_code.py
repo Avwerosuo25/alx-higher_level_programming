@@ -1,15 +1,11 @@
 #!/usr/bin/python3
-"""A script that:
+"""
+- A script that:
 - takes in a URL,
 - sends a request to the URL
 - displays the body of the response (decoded in utf-8).
 - handles urllib.error.HTTPError exceptions and prints the error code if one occurs
 """
-
-import sys
-import urllib.request
-import urllib.error
-
 
 if __name__ == "__main__":
     url = sys.argv[1]
